@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Jogo da Velha (tic-tac-toe)</title>
+  </head>
+  <body>
+    <h1>Jogo da Velha (tic-tac-toe)</h1>
+    <hr />
+
+    <div class="container">
+      <h1 class="title">Jogo da Velha</h1>
+      <p class="currentPlayer"></p>
+      <div class="board">
+        <div class="cell" data-cell="0"></div>
+        <div class="cell" data-cell="1"></div>
+        <div class="cell" data-cell="2"></div>
+        <div class="cell" data-cell="3"></div>
+        <div class="cell" data-cell="4"></div>
+        <div class="cell" data-cell="5"></div>
+        <div class="cell" data-cell="6"></div>
+        <div class="cell" data-cell="7"></div>
+        <div class="cell" data-cell="8"></div>
+      </div>
+      <button class="restart">Reiniciar</button>
+      <button class="play-against-ai">Jogar contra IA</button>
+      <form class="players">
+        <label for="player1">Jogador 1 (X):</label>
+        <input type="text" id="player1" name="player1" value="Jogador 1" />
+        <label for="player2">Jogador 2 (O):</label>
+        <input type="text" id="player2" name="player2" value="Jogador 2" />
+        <button class="start" type="submit">Começar</button>
+      </form>
+      <button class="theme">Trocar tema</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

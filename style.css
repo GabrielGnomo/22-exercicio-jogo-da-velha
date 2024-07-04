@@ -1,0 +1,203 @@
+/* Estilos globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos do jogo */
+.board {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.cell {
+  align-items: center;
+  background-color: #ddd;
+  border: 2px solid #fff;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  font-size: 3rem;
+  font-weight: bold;
+  height: 100px;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  width: 100px;
+}
+
+.cell.O {
+  color: #2196f3;
+}
+
+.cell.X {
+  color: #f44336;
+}
+
+.cell:hover {
+  background-color: #eee;
+}
+
+.cell.winning {
+  background-color: #e1bee7;
+}
+
+.cell.winning-line {
+  background-color: #c3e6cb;
+}
+
+.currentPlayer {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.players {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.players input {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.players label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.restart {
+  background-color: #2196f3;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.restart:hover {
+  background-color: #0d8ed4;
+}
+
+.theme {
+  background-color: #2196f3;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Tema escuro */
+.dark {
+  background-color: #424242;
+  color: #fff;
+}
+
+.dark .board {
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark .cell {
+  background-color: #555;
+  border-color: #fff;
+  color: #fff;
+}
+
+.dark .cell.O {
+  color: #90caf9;
+}
+
+.dark .cell.X {
+  color: #f48fb1;
+}
+
+.dark .cell:hover {
+  background-color: #666;
+}
+
+.dark .cell.winning {
+  background-color: #9575cd;
+}
+
+.dark .cell.winning-line {
+  background-color: #b39ddb;
+}
+
+.dark .currentPlayer {
+  color: #fff;
+}
+
+.dark .players input {
+  background-color: #555;
+  border-color: #fff;
+  color: #fff;
+}
+
+.dark .players label {
+  color: #fff;
+}
+
+.dark .restart {
+  background-color: #90caf9;
+}
+
+.dark .restart:hover {
+  background-color: #64b5f6;
+}
+
+.dark .theme {
+  background-color: #90caf9;
+  transition: background-color 0.3s ease;
+}
+
+.dark .theme:hover {
+  background-color: #64b5f6;
+}
+
+/* Estilos para tela pequena */
+@media (max-width: 600px) {
+  .board {
+    height: 200px;
+    width: 200px;
+  }
+
+  .cell {
+    font-size: 2rem;
+    height: 66px;
+    width: 66px;
+  }
+
+  .currentPlayer {
+    font-size: 1.2rem;
+  }
+}
